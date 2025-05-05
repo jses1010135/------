@@ -10,6 +10,18 @@ mylist.append([5,4,3,4,5])
 # mylist.pop(0) # 串列取出元素
 # mylist.sort() # 串列排序
 # mylist.reverse() # 串列反轉
+# mylist.clear() # 串列清空
+# mylist.copy() # 串列複製
+# mylist.index(3) # 串列索引
+# mylist.count(3) # 串列計數
+# mylist.extend([7,8,9,10,11]) # 串列擴展元素
+# mylist.deepcopy() # 串列深拷貝
+#mylist = sum(a)
+#mylist= max(a)
+#mylist= min(a)
+# mylist = len(a) # 串列長度
+# mylist = sum(a)/len(a) # 串列平均值
+
 # mytuple = (1,2,3,4,5) # 元組
 # myset = {1,2,3,4,5} # 集合
 # mydict = {'a':1,'b':2,'c':3} # 字典
