@@ -17,8 +17,9 @@ def calc_row_average(data):
 
 def calc_column_average(data):
     column_averages = []
-    for column in data:
-        col_avg = sum(column) / len(column)
+    for col_idx in range(len(data[0])):
+        column_values = [row[col_idx] for row in data]
+        col_avg = sum(column_values) / len(column_values)
         column_averages.append(col_avg)
     return column_averages
 
@@ -28,12 +29,17 @@ def main():
 
     row_avgs = calc_row_average(data_matrix)
     print("每列平均值:")
-    for i, avg in enumerate(row_avgs):
+    i = 0
+    while i < len(row_avgs):
+        avg = row_avgs[i]
         print(f"列 {i+1}: {avg:.2f}")
-    
+        i += 1
     col_avgs = calc_column_average(data_matrix)
     print("\n每欄平均值:")
-    for i, avg in enumerate(col_avgs):
+    i = 0
+    while i < len(col_avgs):
+        avg = col_avgs[i]
         print(f"欄 {i+1}: {avg:.2f}")
+        i += 1
 if __name__ == "__main__":
     main()
