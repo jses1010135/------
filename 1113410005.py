@@ -18,7 +18,7 @@ def calc_row_average(data):
 def calc_column_average(data):
     column_averages = []
     for col_idx in range(len(data[0])):
-        column_values = [row[col_idx] for row in data]
+        column_values = [row[col_idx] for row in data] # 
         col_avg = sum(column_values) / len(column_values)
         column_averages.append(col_avg)
     return column_averages
