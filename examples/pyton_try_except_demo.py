@@ -18,7 +18,7 @@ def file_not_found():
         print("請確認檔案路徑是否正確。")
         # 修正：先以寫入模式開啟檔案
         file = open("sample.txt", "w", encoding="utf-8")
-        os.write(file, "這是自動建立的檔案內容。\n")
+        os.write(file, "這是自動建立的檔案內容。\n") # type: ignore
         
         file.close()
         print("已自動建立檔案 sample.txt")
@@ -27,7 +27,7 @@ def file_not_found():
         print(content)
     finally:
         try:
-            file.close()
+            file.close() # type: ignore
             print("檔案已關閉。")
         except NameError:
             print("檔案未成功開啟，無需關閉。")
