@@ -15,15 +15,15 @@ def generate_scores(count=100, min_mean=50, max_mean=60, min_dev=70, max_dev=80)
 
 def generate_data(count):
     data = []
-    scores = generate_scores(4)
-    for i in range(1, count + 1):
-        student_id = f"id_{i}"
+    scores = generate_scores(count)
+    for i in range(1, count + 1): 
+        student_id = f"id_{i}"#
         name = f"name_{i}"
         
-        chinese = scores[0]
-        english = scores[1]
-        math = scores[2]
-        physics = scores[3]
+        chinese = scores[i - 1] 
+        english = scores[i - 1]
+        math = scores[i - 1]
+        physics = scores[i - 1]
         
         student_data = [student_id, name, chinese, english, math, physics]
         data.append(student_data)
