@@ -58,9 +58,6 @@ def write_to_csv(R, F, M, filename='rebuy_data.csv'):
                     '重買頻率': F[i], 
                     '消費者價值': M[i]
                 })
-                
-
-                writer.writerow({'重買次數': R[i], '重買頻率': F[i], '消費者價值': M[i]})
         print("✅ 已寫入檔案")
     except Exception as e:
         print("❌ 寫入檔案失敗:", e)
