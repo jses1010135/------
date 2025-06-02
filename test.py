@@ -35,7 +35,7 @@ def generate_consumer_value(count=(100, 3000), avg=(0,10000), std_dev=(0,2000)):
         M.append(value)
 
     return M
-def write_to_csv(R, F, M, filename='rebuy_data.csv'):
+def write_to_csv(R, F, M, filename='code/主任數據分析/rebuy_data.csv'):
     filed_name=['重買次數', '重買頻率', '消費者價值']
     try:
         directory = os.path.dirname(filename)  # 獲取檔案所在目錄
@@ -61,7 +61,7 @@ def write_to_csv(R, F, M, filename='rebuy_data.csv'):
     except Exception as e:
         print("❌ 寫入檔案失敗:", e)
 
-def read_from_csv(filename='rebuy_data.csv'):
+def read_from_csv(filename='code/主任數據分析/rebuy_data.csv'):
     """從 CSV 檔案讀取數據"""
     data = []
     try:
