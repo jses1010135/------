@@ -7,7 +7,6 @@ def generate_rebuy_num(count=(10,2000),avg=(0,500), std_dev=(0,50)):# 設定重�
    std_dev = random.uniform(*std_dev)
    R = []
    for _ in range(random.randint(*count)):# 隨機生成重買次數的數量
-    # 使用高斯分布生成重買次數
     rate =(random.gauss(avg, std_dev))  # 使用高斯分布生成重買次數
     rate = round(max(10, min(2000, rate)),2)  # 確保重買次數在10到2000之間
     R.append(rate)
